@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/xmlschema-instance"
+    xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    xsi:schemalocation="http://java.sun.com/xml/ns/javaee
+                        http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    version="2.5">
+
+  <welcome-file-list>
+    <welcome-file>Ckdgcloudshout.html</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+	<servlet-name>downloadmedia</servlet-name>
+	<servlet-class>com.appspot.ckdgcloudshout.DownloadMedia</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>downloadmedia</servlet-name>
+    <url-pattern>/downloadmedia</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>retrieveurl</servlet-name>
+	<servlet-class>com.appspot.ckdgcloudshout.RetrieveUrl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>retrieveurl</servlet-name>
+    <url-pattern>/retrieveurl</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>upload</servlet-name>
+	<servlet-class>com.appspot.ckdgcloudshout.Upload</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>upload</servlet-name>
+    <url-pattern>/upload</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>requestFactoryServlet</servlet-name>
+    <servlet-class>com.google.web.bindery.requestfactory.server.RequestFactoryServlet</servlet-class>
+    <init-param>
+      <param-name>symbolMapsDirectory</param-name>
+      <param-value>WEB-INF/classes/symbolMaps/</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>requestFactoryServlet</servlet-name>
+    <url-pattern>/gwtRequest</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>dataMessagingServlet</servlet-name>
+    <servlet-class>
+      com.google.android.c2dm.server.C2DMRetryServlet
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>dataMessagingServlet</servlet-name>
+      <url-pattern>/tasks/c2dm</url-pattern>
+  </servlet-mapping>
+
+  <security-constraint>
+    <web-resource-collection>
+      <url-pattern>/Ckdgcloudshout.html</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>*</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>tasks</web-resource-name>
+      <url-pattern>/tasks/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+</web-app>
