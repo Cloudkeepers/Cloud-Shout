@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="C:/dev/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201202290255-rel-r37/gwt-2.4.0/gwt-api-checker.jar"/>
+	<classpathentry kind="lib" path="C:/dev/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201202290255-rel-r37/gwt-2.4.0/gwt-dev.jar"/>
+	<classpathentry kind="lib" path="C:/dev/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201202290255-rel-r37/gwt-2.4.0/gwt-servlet.jar"/>
+	<classpathentry kind="lib" path="C:/dev/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201202290255-rel-r37/gwt-2.4.0/gwt-servlet-deps.jar"/>
+	<classpathentry kind="lib" path="C:/dev/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201202290255-rel-r37/gwt-2.4.0/gwt-soyc-vis.jar"/>
+	<classpathentry kind="lib" path="C:/dev/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201202290255-rel-r37/gwt-2.4.0/gwt-user.jar"/>
+	<classpathentry kind="lib" path="C:/dev/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201202290255-rel-r37/gwt-2.4.0/requestfactory-apt.jar"/>
+	<classpathentry kind="lib" path="C:/dev/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201202290255-rel-r37/gwt-2.4.0/requestfactory-client.jar"/>
+	<classpathentry kind="lib" path="C:/dev/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201202290255-rel-r37/gwt-2.4.0/requestfactory-client+src.jar"/>
+	<classpathentry kind="lib" path="C:/dev/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201202290255-rel-r37/gwt-2.4.0/requestfactory-client-src.jar"/>
+	<classpathentry kind="lib" path="C:/dev/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201202290255-rel-r37/gwt-2.4.0/requestfactory-server.jar"/>
+	<classpathentry kind="lib" path="C:/dev/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201202290255-rel-r37/gwt-2.4.0/requestfactory-server+src.jar"/>
+	<classpathentry kind="lib" path="C:/dev/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201202290255-rel-r37/gwt-2.4.0/requestfactory-server-src.jar"/>
+	<classpathentry kind="lib" path="C:/dev/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201202290255-rel-r37/gwt-2.4.0/validation-api-1.0.0.GA.jar"/>
+	<classpathentry kind="lib" path="C:/dev/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201202290255-rel-r37/gwt-2.4.0/validation-api-1.0.0.GA-sources.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
