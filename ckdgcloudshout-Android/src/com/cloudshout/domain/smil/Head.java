@@ -4,7 +4,7 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name="head")
-public class Head extends AbstractSMIL {
+public class Head {
 	@XmlAttribute
 	private String id;
 	@XmlAttribute

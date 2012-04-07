@@ -1,6 +1,6 @@
 package com.cloudshout.domain.smil;
 
-public class Region extends AbstractSMIL {
+public class Region {
 	private String regionName;
 	
 	private int top;

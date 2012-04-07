@@ -1,6 +1,6 @@
 package com.cloudshout.domain.smil;
 
-public class RootLayout extends AbstractSMIL {
+public class RootLayout {
 	private int width;
 	private int height;
 }
