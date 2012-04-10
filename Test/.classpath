@@ -17,5 +17,16 @@
 	<classpathentry kind="lib" path="C:/dev/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201202290255-rel-r37/gwt-2.4.0/requestfactory-server-src.jar"/>
 	<classpathentry kind="lib" path="C:/dev/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201202290255-rel-r37/gwt-2.4.0/validation-api-1.0.0.GA.jar"/>
 	<classpathentry kind="lib" path="C:/dev/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201202290255-rel-r37/gwt-2.4.0/validation-api-1.0.0.GA-sources.jar"/>
+	<classpathentry kind="lib" path="lib/activation-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-core-asl-1.9.2.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-jaxrs-1.9.2.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-mapper-asl-1.9.2.jar"/>
+	<classpathentry kind="lib" path="lib/jaxb-api-2.1.jar"/>
+	<classpathentry kind="lib" path="lib/jaxb-api-2.2.4 (1).jar"/>
+	<classpathentry kind="lib" path="lib/jaxb-api-2.2.4.jar"/>
+	<classpathentry kind="lib" path="lib/jaxb-impl-2.2.4-1.jar"/>
+	<classpathentry kind="lib" path="lib/JAXB2_20120218.jar"/>
+	<classpathentry kind="lib" path="lib/jettison-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/stax-api-1.0-2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
