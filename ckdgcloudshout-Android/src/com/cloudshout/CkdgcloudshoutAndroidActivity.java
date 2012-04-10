@@ -1,5 +1,7 @@
 package com.cloudshout;
 
+/* comment foo*/
+
 import android.app.Activity;
 import android.os.Bundle;
 
