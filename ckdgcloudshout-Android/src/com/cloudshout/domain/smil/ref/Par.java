@@ -1,6 +1,6 @@
 package com.cloudshout.domain.smil.ref;
 
 
-public class Par {
+public class Par extends Synchronization {
 
 }

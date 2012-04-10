@@ -1,6 +1,6 @@
 package com.cloudshout.domain.smil.ref;
 
 
-public class Seq {
+public class Seq extends Synchronization {
 
 }
