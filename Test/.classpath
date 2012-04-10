@@ -22,7 +22,6 @@
 	<classpathentry kind="lib" path="lib/jackson-jaxrs-1.9.2.jar"/>
 	<classpathentry kind="lib" path="lib/jackson-mapper-asl-1.9.2.jar"/>
 	<classpathentry kind="lib" path="lib/jaxb-api-2.1.jar"/>
-	<classpathentry kind="lib" path="lib/jaxb-api-2.2.4 (1).jar"/>
 	<classpathentry kind="lib" path="lib/jaxb-api-2.2.4.jar"/>
 	<classpathentry kind="lib" path="lib/jaxb-impl-2.2.4-1.jar"/>
 	<classpathentry kind="lib" path="lib/JAXB2_20120218.jar"/>
