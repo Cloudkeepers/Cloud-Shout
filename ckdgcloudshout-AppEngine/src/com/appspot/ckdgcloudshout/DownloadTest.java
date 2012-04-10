@@ -13,8 +13,6 @@ public class DownloadTest {
 			HttpResponse response = new DefaultHttpClient().execute(new HttpGet("http://localhost:8888/downloadmedia"));
 			response.getStatusLine().getStatusCode();
 			response.getAllHeaders();
-			
-			
 		}
 		catch (ClientProtocolException e) {
 			e.printStackTrace();
