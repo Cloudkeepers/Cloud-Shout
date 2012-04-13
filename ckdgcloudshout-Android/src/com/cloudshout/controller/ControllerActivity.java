@@ -3,6 +3,7 @@ package com.cloudshout.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.R;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -42,6 +43,7 @@ public class ControllerActivity extends TabActivity implements OnTabChangeListen
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.controller);
+        
         
         Resources res = getResources(); // Resource object to get Drawables
 		tabHost = getTabHost();
