@@ -1,0 +1,23 @@
+<smil>
+<head>
+<layout> 
+	<root-layout width="248" height="300" background-color="blue" />
+	     <region id="a" top="20" left="64" />
+	     <region id="b" top="120" left="20"/>
+</layout>
+</head>
+<body>
+<par>
+	<img src="http://flowerinfo.org/wp-content/gallery/hibiscus-flowers/hibiscus-flower-5.jpg"
+	     region="a"
+	     begin="0s"
+	     dur="15s"/> 
+	<img src="http://www.content-networking.com/smil/earthrise.jpg"
+	     region="b"
+	     begin="2s"
+	     end="8s"/> 
+	<audio src="http://www.content-networking.com/smil/hello.wav"
+	     begin="4s"/> 
+</par>
+</body>
+</smil>
