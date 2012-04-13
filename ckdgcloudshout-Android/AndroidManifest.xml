@@ -10,8 +10,8 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <activity
-            android:name=".ControllerActivity2"
-            android:label="controller2"
+            android:name=".ControllerActivity"
+            android:label="controller"
             android:theme="@android:style/Theme.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
