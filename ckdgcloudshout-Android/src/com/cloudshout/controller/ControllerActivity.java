@@ -3,20 +3,20 @@ package com.cloudshout.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.R;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TabHost;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TabHost.OnTabChangeListener;
 import android.widget.TabHost.TabContentFactory;
-import android.widget.Toast;
+
+import com.cloudshout.R;
 
 
 
