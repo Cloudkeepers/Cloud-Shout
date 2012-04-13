@@ -1,8 +1,7 @@
 <smil>
 <head>
 <layout> 
-	<root-layout width="248" height="300"
-		background-color="blue" />
+	<root-layout width="248" height="300" background-color="blue" />
 	     <region id="a" top="20" left="64" />
 	     <region id="b" top="120" left="20"/>
 </layout>
