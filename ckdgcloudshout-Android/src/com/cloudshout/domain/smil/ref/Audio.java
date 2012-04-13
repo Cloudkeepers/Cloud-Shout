@@ -6,7 +6,7 @@ import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 
 public class Audio extends SMILMedia implements OnCompletionListener {
-	
+	private static final long serialVersionUID = -963565435388191864L;
 	private MediaPlayer mp;
 	private Boolean complete = false; // true = end of audio
 	

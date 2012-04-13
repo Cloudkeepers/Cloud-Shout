@@ -1,17 +1,18 @@
 package com.cloudshout.domain.smil.ref;
 
-import com.cloudshout.domain.smil.SMILVisual;
 import android.content.Context;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
-import android.os.Environment;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.RelativeLayout;
 import android.widget.VideoView;
 
+import com.cloudshout.domain.smil.SMILVisual;
+
 public class Video extends SMILVisual implements OnCompletionListener {
 	
+	private static final long serialVersionUID = -4367354686942821385L;
 	private VideoView v;
 	private RelativeLayout layout;
 	private Boolean complete = false; // true = end of video
@@ -73,5 +74,4 @@ public class Video extends SMILVisual implements OnCompletionListener {
 	public void onCompletion(MediaPlayer arg0) {
 		complete = true;
 	}
-
 }

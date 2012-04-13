@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class Text extends SMILVisual {
-	
+	private static final long serialVersionUID = 543760294330737947L;
 	private TextView t;
 	
 	// constructors

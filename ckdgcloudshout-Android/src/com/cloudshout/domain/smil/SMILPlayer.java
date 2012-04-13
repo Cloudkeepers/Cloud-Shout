@@ -2,34 +2,27 @@ package com.cloudshout.domain.smil;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-
-import com.cloudshout.domain.smil.ref.Image;
-import com.cloudshout.domain.smil.ref.Text;
-import com.cloudshout.domain.smil.SMILMedia;
-import com.cloudshout.domain.smil.SMILVisual;
+import java.util.List;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-//import android.view.GestureDetector;
-//import android.view.GestureDetector.OnGestureListener;
-//import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
-import android.widget.LinearLayout.LayoutParams;
+
+import com.cloudshout.domain.smil.ref.Image;
+import com.cloudshout.domain.smil.ref.Text;
 
 public class SMILPlayer extends Activity {
 
 	private RelativeLayout root;
 	private int counter = 0;
-	private ArrayList<SMILMedia> mediaList;
+	private List<SMILMedia> mediaList;
 	private CountDownTimer timer;
 	private ProgressBar pbar;
 	
@@ -55,17 +48,11 @@ public class SMILPlayer extends Activity {
 		}
 		
 		setContentView(root);
-		
 	}
 	
-	public boolean setMediaList(ArrayList<SMILMedia> mediaList) {
-		boolean returnValue = false;
-		
+	public void setMediaList(List<SMILMedia> mediaList) {
 		this.mediaList = mediaList;
 		loadMediaList();
-		returnValue = true;
-		
-		return returnValue;
 	}
 	
 	private void loadMediaList() {
@@ -76,24 +63,22 @@ public class SMILPlayer extends Activity {
 								RelativeLayout.LayoutParams.WRAP_CONTENT));
 			}
 			else if(media instanceof Image) {
-				root.addView(((SMILVisual) media).createView(this),
-						new RelativeLayout.LayoutParams(((SMILVisual) media).getRight(),
-								((SMILVisual) media).getBottom()));
+				SMILVisual visual = (SMILVisual) media;
+				root.addView(visual.createView(this), new RelativeLayout.LayoutParams(visual.getRight(), visual.getBottom()));
 			}
 			else {
-				root.addView(((SMILVisual) media).createView(this),
-						new RelativeLayout.LayoutParams(((SMILVisual) media).getRight(),
-								((SMILVisual) media).getBottom()));
+				SMILVisual visual = (SMILVisual) media;
+				root.addView(visual.createView(this), new RelativeLayout.LayoutParams(visual.getRight(), visual.getBottom()));
 			}
 		}
 	}	
 	
-	private int getLength(ArrayList<SMILMedia> mediaList) {
+	private int getLength(List<SMILMedia> mediaList) {
 		int length = 0;
 		
-		for (int i = 0; i < mediaList.size(); i++) {
-			if (length <= mediaList.get(i).getEnd()){
-				length = mediaList.get(i).getEnd();
+		for(SMILMedia smilMedia : mediaList) {
+			if (length <= smilMedia.getEnd()){
+				length = smilMedia.getEnd();
 			}
 		}
 		
@@ -132,8 +117,8 @@ public class SMILPlayer extends Activity {
 	
 	private void pauseMessage() {
 		timer.cancel();
-		for(int i = 0; i < mediaList.size(); i++) {
-			mediaList.get(i).pauseSO();
+		for(SMILMedia smilMedia : mediaList) {
+			smilMedia.pauseSO();
 		}
 		// mDialog lines commented out until I double check design with team
 		// these will probably be replaced with Android buttons
@@ -141,8 +126,8 @@ public class SMILPlayer extends Activity {
 	}
 	
 	private void resumeMessage() {
-		for(int i = 0; i < mediaList.size(); i++) {
-			mediaList.get(i).resumeSO();
+		for(SMILMedia smilMedia : mediaList) {
+			smilMedia.resumeSO();
 		}
 		
 		playMessage(getLength(mediaList), counter);
@@ -150,8 +135,8 @@ public class SMILPlayer extends Activity {
 	
 	private void stopMessage() {
 		counter = 0;
-		for(int i = 0; i < mediaList.size(); i++) {
-			mediaList.get(i).endSO();
+		for(SMILMedia smilMedia : mediaList) {
+			smilMedia.endSO();
 		}
 		// mDialog lines commented out until I double check design with team
 		// these will probably be replaced with Android buttons
@@ -159,26 +144,13 @@ public class SMILPlayer extends Activity {
 	}
 	
 	private void beginEnd(int counter) {
-		for(int i = 0; i < mediaList.size(); i++) {
-			if(counter == mediaList.get(i).getBegin()){
-				mediaList.get(i).startSO();
+		for(SMILMedia smilMedia : mediaList) {
+			if(counter == smilMedia.getBegin()){
+				smilMedia.startSO();
 			}
-			if(counter == mediaList.get(i).getEnd()){
-				mediaList.get(i).endSO();
+			if(counter == smilMedia.getEnd()){
+				smilMedia.endSO();
 			}
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class Image extends SMILVisual {
-	
+	private static final long serialVersionUID = -1661026168295957237L;
 	private ImageView i;
 	private Bitmap bitMap;
 	

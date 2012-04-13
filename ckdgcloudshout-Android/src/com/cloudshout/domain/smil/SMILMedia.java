@@ -3,7 +3,7 @@ package com.cloudshout.domain.smil;
 import java.io.Serializable;
 
 public abstract class SMILMedia implements Serializable {
-	
+	private static final long serialVersionUID = -4181974875361868285L;
 	// values for timing, positioning, etc.
 	private Integer begin = 0;
 	private Integer end = 0;

@@ -1,19 +1,17 @@
 package com.cloudshout.domain.smil;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import com.cloudshout.domain.smil.SMILMedia;
+import java.util.List;
 
 public class SerializeSO implements Serializable {
+	private static final long serialVersionUID = -5156229858520238614L;
+	private List<SMILMedia> SMILlist = null;
 	
-	private ArrayList<SMILMedia> SMILlist = null;
-	
-	public SerializeSO(ArrayList<SMILMedia> SMILlist) {
+	public SerializeSO(List<SMILMedia> SMILlist) {
 		this.SMILlist = SMILlist;
 	}
 	
-	public ArrayList<SMILMedia> getList() {
+	public List<SMILMedia> getList() {
 		return this.SMILlist;
 	}
-
 }
