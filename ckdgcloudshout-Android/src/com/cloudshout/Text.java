@@ -1,6 +1,6 @@
-package com.cloudshout.domain.smil.ref;
+package com.cloudshout;
 
-import com.cloudshout.domain.smil.SMILVisual;
+
 import android.content.Context;
 import android.view.View;
 import android.widget.TextView;

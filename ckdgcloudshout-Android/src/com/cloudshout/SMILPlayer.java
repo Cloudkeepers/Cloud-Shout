@@ -1,4 +1,4 @@
-package com.cloudshout.domain.smil;
+package com.cloudshout;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -15,8 +15,6 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.cloudshout.domain.smil.ref.Image;
-import com.cloudshout.domain.smil.ref.Text;
 
 public class SMILPlayer extends Activity {
 

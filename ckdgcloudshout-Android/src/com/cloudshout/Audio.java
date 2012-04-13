@@ -1,6 +1,6 @@
-package com.cloudshout.domain.smil.ref;
+package com.cloudshout;
 
-import com.cloudshout.domain.smil.SMILMedia;
+
 import java.io.IOException;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;

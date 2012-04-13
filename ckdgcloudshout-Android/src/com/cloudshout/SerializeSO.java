@@ -1,4 +1,4 @@
-package com.cloudshout.domain.smil;
+package com.cloudshout;
 
 import java.io.Serializable;
 import java.util.List;

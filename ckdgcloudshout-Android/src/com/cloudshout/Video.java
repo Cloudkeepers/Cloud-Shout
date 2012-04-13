@@ -1,4 +1,4 @@
-package com.cloudshout.domain.smil.ref;
+package com.cloudshout;
 
 import android.content.Context;
 import android.media.MediaPlayer;
@@ -8,7 +8,6 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.RelativeLayout;
 import android.widget.VideoView;
 
-import com.cloudshout.domain.smil.SMILVisual;
 
 public class Video extends SMILVisual implements OnCompletionListener {
 	

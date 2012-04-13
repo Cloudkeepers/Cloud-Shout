@@ -1,6 +1,7 @@
-package com.cloudshout.domain.smil;
+package com.cloudshout;
 
-import com.cloudshout.domain.smil.SMILMedia;
+import com.cloudshout.SMILMedia;
+
 import android.content.Context;
 import android.view.View;
 

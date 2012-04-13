@@ -1,6 +1,6 @@
-package com.cloudshout.domain.smil.ref;
+package com.cloudshout;
 
-import com.cloudshout.domain.smil.SMILVisual;
+
 import java.io.File;
 import android.content.Context;
 import android.graphics.Bitmap;
