@@ -4,11 +4,20 @@ import javax.xml.bind.annotation.XmlAttribute;
 
 public class Region {
 	@XmlAttribute(name="id")
-	String id;
+	private String id;
 	
-	@XmlAttribute(name="top")
-	int top;
-	
+	@XmlAttribute(name="bottom")
+	private int bottom;
+
 	@XmlAttribute(name="left")
-	int left;
+	private int left;
+
+	@XmlAttribute(name="right")
+	private int right;
+	
+	@XmlAttribute(name="height")
+	private int height;
+	
+	@XmlAttribute(name="width")
+	private int width;
 }
