@@ -33,13 +33,11 @@ public class AddItemActivity extends Activity {
 	        coordinates = (String) bundel.get("coordinates");
 	        
 	        if(type.equalsIgnoreCase("text")){
-	        	//TODO hide preview cols
+	        	//TODO hide some cols
 	        	updateProfile();
-	        }else if(type.equalsIgnoreCase("image")){
-	        	updateProfile();
-	        }else if(type.equalsIgnoreCase("audio")){
-	        	updateProfile();
-	        }else if(type.equalsIgnoreCase("video")){
+	        }else if(type.equalsIgnoreCase("image") ||
+	        		type.equalsIgnoreCase("audio") || type.equalsIgnoreCase("video")){
+	        	//TODO hide some cols
 	        	updateProfile();
 	        } else{
 	        	throw new Exception("referanced type does not exists.");
@@ -52,5 +50,9 @@ public class AddItemActivity extends Activity {
 	private void updateProfile(){
 		name.setText(type.toUpperCase());
 		position.setText(coordinates.toString());
+		//TODO complete update profile on a editText change
 	}
+	
+
+	
 }
