@@ -94,31 +94,28 @@ public class ComposerActivity extends Activity{
 	    final View touchView = findViewById(R.id.touchView);
 	    
 	    touchView.setOnTouchListener(new View.OnTouchListener() {
-			public boolean onTouch(View v, MotionEvent event) {
-				
-				
-				textView.setText("Touch coordinates : " + String.valueOf(event.getX()) + "x" + String.valueOf(event.getY()));
-				
-				
+			public boolean onTouch(View v, final MotionEvent event) {				
 				final CharSequence[] items = {"Text", "Image", "Audio", "Video"};
 
 				AlertDialog.Builder builder = new AlertDialog.Builder(ComposerActivity.this);
 				builder.setTitle("Select an item to add.");
 				builder.setItems(items, new DialogInterface.OnClickListener() {
 				    public void onClick(DialogInterface dialog, int item) {
-						Intent myIntent = new Intent(ComposerActivity.this, AddItemActivity.class);
+				    	
 						//TODO Call parser here, get SMIL objects back
-						//myIntent.putExtra("type","inbox");
 				    	
 				    	if(items[item].toString().equalsIgnoreCase("Text") || 
 			    			items[item].toString().equalsIgnoreCase("Image") ||
 			    			items[item].toString().equalsIgnoreCase("Audio") ||
 			    			items[item].toString().equalsIgnoreCase("Video")){
+			    			Intent myIntent = new Intent(ComposerActivity.this, AddItemActivity.class);
 				    		myIntent.putExtra("type",items[item].toString());
+				    		myIntent.putExtra("coordinates",String.valueOf(event.getX()) + "x" + String.valueOf(event.getY()));
 				    		ComposerActivity.this.startActivity(myIntent);
 				    	} else{
 				    		//do nothing, however
 				    	}
+				    	
 				    }
 				});
 				AlertDialog alert = builder.create();

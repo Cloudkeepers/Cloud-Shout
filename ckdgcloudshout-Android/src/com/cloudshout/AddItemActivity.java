@@ -2,12 +2,16 @@ package com.cloudshout;
 
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class AddItemActivity extends Activity {
 	private String type = null;
+	private String coordinates = null;
 	private TextView name, height, width, position, layer, show, stop;
 	
 	
@@ -26,15 +30,17 @@ public class AddItemActivity extends Activity {
 	    Bundle bundel = getIntent().getExtras(); 
 	    try{
 	        type = (String) bundel.get("type");
+	        coordinates = (String) bundel.get("coordinates");
+	        
 	        if(type.equalsIgnoreCase("text")){
-	        	name.setText("TEXT OBJ");
 	        	//TODO hide preview cols
+	        	updateProfile();
 	        }else if(type.equalsIgnoreCase("image")){
-	        	name.setText("IMAGE OBJ");
+	        	updateProfile();
 	        }else if(type.equalsIgnoreCase("audio")){
-	        	name.setText("AUDIO OBJ");
+	        	updateProfile();
 	        }else if(type.equalsIgnoreCase("video")){
-	        	name.setText("VIDEO OBJ");
+	        	updateProfile();
 	        } else{
 	        	throw new Exception("referanced type does not exists.");
 	        }
@@ -42,5 +48,9 @@ public class AddItemActivity extends Activity {
 	    	//TODO show error, then make new intent, or go back
 	    }
 	}
+	
+	private void updateProfile(){
+		name.setText(type.toUpperCase());
+		position.setText(coordinates.toString());
+	}
 }
-
