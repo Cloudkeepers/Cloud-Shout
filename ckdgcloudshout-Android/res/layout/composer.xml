@@ -13,10 +13,10 @@
     />
 <TextView  
     android:id="@+id/instructions" 
-    android:textColor="#EDED98"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:gravity="center" 
     android:text="Press anywhere on the screen to add an item."
-    />
+    android:textSize="15sp" android:shadowColor="#00ccff"
+    android:shadowRadius="1.5" android:shadowDx="1" android:shadowDy="1"/>
 </LinearLayout>
