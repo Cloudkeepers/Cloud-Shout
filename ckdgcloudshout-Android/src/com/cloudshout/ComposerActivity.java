@@ -1,7 +1,13 @@
 package com.cloudshout;
 
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,10 +16,12 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class ComposerActivity extends Activity{
-	
+	Map smilObjects = new HashMap<Integer, Object>();
+	int objectsCounter = 0;
 	
     /**
      * Create's Android menu
@@ -31,10 +39,32 @@ public class ComposerActivity extends Activity{
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle item selection
+        Intent myIntent;
+		// Handle item selection
         switch (item.getItemId()) {
         	case R.id.composer_cancle:
-        		//TODO composer onCancel stuff
+        		//propt exit alert
+        		DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+        		    public void onClick(DialogInterface dialog, int which) {
+        		        switch (which){
+        		        case DialogInterface.BUTTON_POSITIVE:
+        		            //No button clicked
+        		        	//do nothing
+        		            break;
+        		        case DialogInterface.BUTTON_NEGATIVE:
+        		            //Yes button clicked
+        	        		//return to ControllerActivity
+        		        	Intent myIntent;
+        		        	myIntent = new Intent(ComposerActivity.this, ControllerActivity.class);
+        	    			myIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); 
+        	    			myIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        	    			ComposerActivity.this.startActivity(myIntent);
+        		        }
+        		    }
+        		};
+        		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        		builder.setMessage("Are you sure you want to exit?  All data will be lost.").setPositiveButton("No", dialogClickListener)
+        		    .setNegativeButton("Yes", dialogClickListener).show();
         		return true;
         	case R.id.composer_save:
             	//TODO composer onSave stuff
@@ -56,8 +86,7 @@ public class ComposerActivity extends Activity{
      */
 	//src:http://stackoverflow.com/questions/2939332/get-the-co-ordinates-of-a-touch-event-on-android
 	@Override
-	public void onCreate(Bundle savedInstanceState)
-	{
+	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.composer);
 	    
@@ -66,8 +95,30 @@ public class ComposerActivity extends Activity{
 	    
 	    touchView.setOnTouchListener(new View.OnTouchListener() {
 			public boolean onTouch(View v, MotionEvent event) {
-	            textView.setText("Touch coordinates : " +
-	            		String.valueOf(event.getX()) + "x" + String.valueOf(event.getY()));
+				
+				
+				textView.setText("Touch coordinates : " + String.valueOf(event.getX()) + "x" + String.valueOf(event.getY()));
+				
+				
+				final CharSequence[] items = {"Text", "Image", "Audio", "Video"};
+
+				AlertDialog.Builder builder = new AlertDialog.Builder(ComposerActivity.this);
+				builder.setTitle("Select an item to add.");
+				builder.setItems(items, new DialogInterface.OnClickListener() {
+				    public void onClick(DialogInterface dialog, int item) {
+				    	if(items[item].toString().equalsIgnoreCase("Text")){
+				    	} else if (items[item].toString().equalsIgnoreCase("Image")){
+				    	} else if (items[item].toString().equalsIgnoreCase("Audio")){
+				    	} else if (items[item].toString().equalsIgnoreCase("Video")){
+				    	} else{
+				    		//do nothing
+				    	}
+				    	
+				    	//TODO launch add item specific intent
+				    }
+				});
+				AlertDialog alert = builder.create();
+				alert.show();
 		        return true;
 			}
 	    });

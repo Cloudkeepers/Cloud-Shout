@@ -42,10 +42,15 @@ public class PlayerActivity extends Activity {
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle item selection
-        switch (item.getItemId()) {
+        Intent myIntent;
+		// Handle item selection
+        switch (item.getItemId()){
         	case R.id.player_close:
-        		//TODO player onClose stuff
+        		//return to ControllerActivity
+    			myIntent = new Intent(PlayerActivity.this, ControllerActivity.class);
+    			myIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); 
+    			myIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+    			PlayerActivity.this.startActivity(myIntent);
         		return true;
         	case R.id.player_play:
             	//TODO player onPlay stuff
