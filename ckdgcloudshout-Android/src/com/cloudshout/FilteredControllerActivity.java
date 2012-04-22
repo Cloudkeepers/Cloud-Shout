@@ -1,4 +1,4 @@
-package com.cloudshout.controller;
+package com.cloudshout;
 
 import java.util.ArrayList;
 import java.util.List;
