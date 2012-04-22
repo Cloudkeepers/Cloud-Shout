@@ -8,6 +8,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -16,12 +19,45 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 public class PlayerActivity extends Activity {
-
 	private RelativeLayout root;
 	private int counter = 0;
 	private List<SMILMedia> mediaList;
 	private CountDownTimer timer;
 	private ProgressBar pbar;
+	
+	
+    /**
+     * Create's Android menu
+     */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.layout.player_menu, menu);
+        return true;
+    }
+    
+    
+    /**
+     * Is called once menu item is selected from the android menu
+     */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+        	case R.id.player_close:
+        		//TODO player onClose stuff
+        		return true;
+        	case R.id.player_play:
+            	//TODO player onPlay stuff
+                return true;
+            case R.id.player_pause:
+            	//TODO player onPause stuff
+            	return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+	
 	
 	public void OnCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

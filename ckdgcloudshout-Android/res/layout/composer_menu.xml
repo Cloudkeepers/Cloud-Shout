@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/composer_save"
+          android:title="Save"/>
+    <item android:id="@+id/composer_send"
+          android:title="Send" />
+    <item android:id="@+id/composer_cancle"
+          android:title="Cancel" />
+    <item android:id="@+id/composer_preview"
+          android:title="Preview" />
+</menu>

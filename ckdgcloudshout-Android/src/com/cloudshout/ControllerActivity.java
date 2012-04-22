@@ -64,7 +64,9 @@ public class ControllerActivity extends TabActivity implements OnTabChangeListen
         }
     }
     
-    
+    /**
+     * Is called by the android OS.  Required.
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
