@@ -8,13 +8,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center">
-        <!-- File Names -->
+        <!-- General Top Row -->
         <TableRow
-            android:id="@+id/tableCol1"
+            android:id="@+id/tableCol0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
             <TableRow
-                android:id="@+id/tableCol1Row1"
+                android:id="@+id/tableCol0Row1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" >
                 <TextView
@@ -26,7 +26,7 @@
                     android:shadowRadius="1.5" android:shadowDx="1" android:shadowDy="1"/>
             </TableRow>
             <TableRow
-                android:id="@+id/tableCol1Row2"
+                android:id="@+id/tableCol0Row2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" >
                 <TextView
@@ -36,6 +36,32 @@
                     android:text="Values"
                     android:textSize="15sp" android:shadowColor="#00ccff"
                     android:shadowRadius="1.5" android:shadowDx="1" android:shadowDy="1"/>
+            </TableRow>
+        </TableRow>
+        <!-- Name -->
+        <TableRow
+            android:id="@+id/tableCol1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <TableRow
+                android:id="@+id/tableCol1Row1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name: "/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableCol1Row2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:id="@+id/editName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="xxx"/>
             </TableRow>
         </TableRow>
         <!-- Height -->

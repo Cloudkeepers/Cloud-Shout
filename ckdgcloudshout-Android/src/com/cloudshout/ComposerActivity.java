@@ -106,15 +106,19 @@ public class ComposerActivity extends Activity{
 				builder.setTitle("Select an item to add.");
 				builder.setItems(items, new DialogInterface.OnClickListener() {
 				    public void onClick(DialogInterface dialog, int item) {
-				    	if(items[item].toString().equalsIgnoreCase("Text")){
-				    	} else if (items[item].toString().equalsIgnoreCase("Image")){
-				    	} else if (items[item].toString().equalsIgnoreCase("Audio")){
-				    	} else if (items[item].toString().equalsIgnoreCase("Video")){
-				    	} else{
-				    		//do nothing
-				    	}
+						Intent myIntent = new Intent(ComposerActivity.this, AddItemActivity.class);
+						//TODO Call parser here, get SMIL objects back
+						//myIntent.putExtra("type","inbox");
 				    	
-				    	//TODO launch add item specific intent
+				    	if(items[item].toString().equalsIgnoreCase("Text") || 
+			    			items[item].toString().equalsIgnoreCase("Image") ||
+			    			items[item].toString().equalsIgnoreCase("Audio") ||
+			    			items[item].toString().equalsIgnoreCase("Video")){
+				    		myIntent.putExtra("type",items[item].toString());
+				    		ComposerActivity.this.startActivity(myIntent);
+				    	} else{
+				    		//do nothing, however
+				    	}
 				    }
 				});
 				AlertDialog alert = builder.create();
