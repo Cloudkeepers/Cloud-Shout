@@ -7,6 +7,9 @@ import android.app.TabActivity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -21,24 +24,46 @@ import com.cloudshout.R;
 
 
 public class ControllerActivity extends TabActivity implements OnTabChangeListener {
-
 	private static final String LIST1_TAB_TAG = "Inbox";
 	private static final String LIST2_TAB_TAG = "Outbox";
 	private static final String LIST3_TAB_TAG = "Drafts";
-
-	// The two views in our tabbed example
 	private ListView inboxListView;
 	private List<Object> inbox = new ArrayList<Object>();
 	private ListView outboxListView;
 	private List<Object> outbox = new ArrayList<Object>();
 	private ListView draftsListView;
 	private List<Object> drafts = new ArrayList<Object>();
-	
 	private TabHost tabHost;
-	
     public Intent myIntent;
-
-	
+    
+    /**
+     * Create's menu
+     */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.layout.controller_menu, menu);
+        return true;
+    }
+    
+    /**
+     * Is called once menu item is selected
+     */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.newMessage:
+            	//open composer
+				myIntent = new Intent(ControllerActivity.this, ComposerActivity.class);
+			    ControllerActivity.this.startActivity(myIntent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+    
+    
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,7 +99,8 @@ public class ControllerActivity extends TabActivity implements OnTabChangeListen
 		}));
 
     }
-
+    
+    
 	/**
 	 * Implement logic here when a tab is selected
 	 */

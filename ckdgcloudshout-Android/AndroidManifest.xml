@@ -32,6 +32,13 @@
             android:theme="@android:style/Theme.NoTitleBar">
         </activity>
         
+        <!-- COMPOSER -->
+        <activity
+            android:name=".ComposerActivity"
+            android:label="Composer"
+            android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+        
     </application>
 
 </manifest>
