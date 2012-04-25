@@ -17,6 +17,7 @@ public class Text extends SMILVisual {
 	public Text(String resource, int left, int top, int begin, int end){
 		this.setBegin(begin);
 		this.setEnd(end);
+		this.setLeft(left);
 		this.setTop(top);
 		this.setResource(resource);
 	}
