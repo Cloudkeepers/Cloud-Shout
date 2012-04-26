@@ -27,7 +27,7 @@ public class TempPlayerTest {
 		int begin2 = 5;
 		int end2 = 10;
 		
-		SMILMedia text1 = new Text(resource1, left1, right1, begin1, end1);
+		Text text1 = new Text(resource1, left1, right1, begin1, end1);
 		Text text2 = new Text(resource2, left2, right2, begin2, end2);
 		
 		// wrap Text objects in array list
